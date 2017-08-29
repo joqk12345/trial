@@ -1,0 +1,5 @@
+${AnsiColor.GREEN}
+庭审管理系统
+${AnsiColor.BRIGHT_RED}
+Application Version: ${application.version}${application.formatted-version}
+spring boot Version:${spring-boot.version}${spring-boot.formatted-version}
