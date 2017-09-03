@@ -28,16 +28,17 @@
     * 模板下载
 * 案件列表
     * 展示{ok}
-        * 日期格式设置
-        * 查询框中的时间选择
+        * 日期格式设置{ok}
+        * 查询框中的时间选择{ok}
         * select框中的列表填充
-        * 虚拟列的填充 @Transient
-    * 列表分页
+        * 虚拟列的填充 @Transient{ok}
+    * 列表
+        * 分页{ok}
         * 检索
             * 时间框以及按照时间范围检索
         * 分页
     * 添加
-        * 输入时间框
+        * 输入时间框 {ok}
     * 删除
         * 删除需要逻辑删除
     * 修改
@@ -53,6 +54,8 @@
     * search 查询方法暴露
         * 通过 @RestResource 注解实现
 * js校验
+* js 事件传播机制
+    * 通过jquery动态加载html元素的时候也需要动态给其添加样式或者js事件
 
 * 查询问题的校验
     1. 针对js日期控件的显示问题，由于针对表格选择器是使用的通用选择器没有限定范围导致，日期控件本来就是用表格显示的，现在通用表格就改变了他的样式
@@ -63,6 +66,8 @@
     1. https://spring.io/blog/2011/02/10/getting-started-with-spring-data-jpa/
     2. https://yq.aliyun.com/articles/91891  {jpa查询规范案例}
     3. http://www.cnblogs.com/chenpi/p/6357527.html  springdata JPA案例
+    4. http://blog.csdn.net/soul_code/article/details/54139709 
+        1. @Projection定义的数据格式还可以直接配置到Repository之上，就像下面代码中的这样
 # spring data rest 
     1. https://springcloud.cc/spring-data-rest-zhcn.html  （中文版）
     2. https://docs.spring.io/spring-data/rest/docs/current/reference/html/
