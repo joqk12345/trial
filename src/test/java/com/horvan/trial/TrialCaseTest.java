@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.text.DateFormat;
@@ -103,11 +105,13 @@ public class TrialCaseTest {
 
     @Test
     public void TestByCaseNoIsLikeAndCaseReasonIsLikeOrderBy() throws Exception {
-        List<TrialCase> trialCases = trialCaseRepository.findByCaseNoIsLikeAndCaseReasonIsLikeOrderByCaseTimeDesc("%00%","");
-        System.out.println(trialCases.size());
-        for(TrialCase trialCase :trialCases){
-            System.out.println(trialCase.toString());
-        }
+
+
+//        Page<TrialCase> trialCases = trialCaseRepository.findByCaseNoIsLikeAndCaseReasonIsLikeOrderByCaseTimeDesc("%00%","",);
+//        System.out.println(trialCases.getTotalElements());
+//        for(TrialCase trialCase :trialCases){
+//            System.out.println(trialCase.toString());
+//        }
     }
 
     @Test

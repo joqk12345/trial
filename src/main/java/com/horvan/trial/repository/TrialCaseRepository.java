@@ -3,6 +3,7 @@ package com.horvan.trial.repository;
 import com.horvan.trial.Constant;
 import com.horvan.trial.entity.TrialCase;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
@@ -22,10 +23,10 @@ public interface TrialCaseRepository extends PagingAndSortingRepository<TrialCas
     @Description("根据案号查询")
     List<TrialCase> findByCaseNo(@Param("caseNo") String caseNo);
 
-    @Query("select u from TrialCase u where u.CaseNo = ?1")
-//    @RestResource(path = "QueryCaseNo",exported = true )
-    @Description("根据案号查询查询")
-    Page<TrialCase> readByByCaseNo(@Param("caseNo") String caseNo);
+//    @Query("select u from TrialCase u where u.CaseNo = ?1")
+////    @RestResource(path = "QueryCaseNo",exported = true )
+//    @Description("根据案号查询查询")
+//    Page<TrialCase> readByByCaseNo(@Param("caseNo") String caseNo);
 
     @RestResource(path = "caseNoStartWith",exported = false )
     @Description("根据案号查询,模糊查询")
@@ -61,7 +62,7 @@ public interface TrialCaseRepository extends PagingAndSortingRepository<TrialCas
 
     @RestResource(path = "caseNoAndCaseReasonIsLikeOrderBy" )
     @Description("根据案号,和案由进行联合查询查询,并且此连个字段都是模糊查询")
-    List<TrialCase> findByCaseNoIsLikeAndCaseReasonIsLikeOrderByCaseTimeDesc( String caseNo,String caseReason);
+    Page<TrialCase> findByCaseNoIsLikeAndCaseReasonIsLikeOrderByCaseTimeDesc(@Param("caseNo") String caseNo, @Param("caseReason") String caseReason, Pageable pageable);
 
     @RestResource(path = "caseNoAndCaseReasonAndTrialStatusIsLikeTrialStatusOrderBy" )
     @Description("根据案号,庭审状态和案由进行联合查询查询,案号与案由是模糊查询，庭审状态是精确查询，结果以案件时间倒序排序")
