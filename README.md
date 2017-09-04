@@ -70,7 +70,7 @@
     3. http://www.cnblogs.com/chenpi/p/6357527.html  springdata JPA案例
     4. http://blog.csdn.net/soul_code/article/details/54139709 
         1. @Projection定义的数据格式还可以直接配置到Repository之上，就像下面代码中的这样
-    5. http://blog.csdn.net/u010429286/article/details/52724451   {支持查询分页}
+    5. http://blog.csdn.net/u010429286/article/details/52724451   {支持查询条件分页}
 # spring data rest 
     1. https://springcloud.cc/spring-data-rest-zhcn.html  （中文版）
     2. https://docs.spring.io/spring-data/rest/docs/current/reference/html/
