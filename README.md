@@ -37,6 +37,7 @@
         * 检索
             * 时间框以及按照时间范围检索
         * 分页
+        * 按照native query 方法进行SQL查询
     * 添加
         * 输入时间框 {ok}
     * 删除
@@ -60,6 +61,8 @@
 * 查询问题的校验
     1. 针对js日期控件的显示问题，由于针对表格选择器是使用的通用选择器没有限定范围导致，日期控件本来就是用表格显示的，现在通用表格就改变了他的样式
     2. #tableList table  解决办法，及采用定位好自己的选择的那部分表格使用css样式
+    3. 解决日期格式转换问题
+    4. js前端需要控制查询逻辑，而不是把请求参数发到后端处理
 * 日志的添加与使用
     1.  Note: further occurrences of Parameter errors will be logged at DEBUG level.
   
@@ -71,6 +74,9 @@
     4. http://blog.csdn.net/soul_code/article/details/54139709 
         1. @Projection定义的数据格式还可以直接配置到Repository之上，就像下面代码中的这样
     5. http://blog.csdn.net/u010429286/article/details/52724451   {支持查询条件分页}
+    6. http://www.cnblogs.com/chenying99/archive/2013/06/19/3143539.html  { jpa的三种查询方法}
+    7. https://docs.spring.io/spring-data/jpa/docs/1.10.11.RELEASE/reference/html/#jpa.named-parameters {jpa 官方文档}
+    8. https://stackoverflow.com/questions/38349930/spring-data-and-native-query-with-pagination {原生查询加分页实现}
 # spring data rest 
     1. https://springcloud.cc/spring-data-rest-zhcn.html  （中文版）
     2. https://docs.spring.io/spring-data/rest/docs/current/reference/html/

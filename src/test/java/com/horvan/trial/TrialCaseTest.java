@@ -53,6 +53,13 @@ public class TrialCaseTest {
         System.out.println(trialCases.size());
     }
 
+    @Test
+    public void TestByfindCaseNo() throws Exception {
+//        List<TrialCase> trialCases = trialCaseRepository.findCase("test007");
+//        System.out.println(trialCases.size());
+    }
+
+
 
 //    @Test
 //    public void TestByQueryCaseNo() throws Exception {

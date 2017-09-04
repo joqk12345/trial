@@ -12,47 +12,66 @@ import java.util.Date;
  */
 @Entity(name = Constant.TABLE_TRIAL_CASE)
 public class TrialCase {
+    public static final String TABLE_ID = "id";
+    public static final String TABLE_TRIAL_NO = "trial_no";
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = TABLE_ID)
     private long id;
-//庭审编号
+    //庭审编号
+    @Column(name = TABLE_TRIAL_NO)
     private String trialNo;
-//笔录模板
+    //笔录模板
+    @Column(name = "template_id")
     private long templateId;
-//案号
+    //案号
+    @Column(name = "case_no")
     private String caseNo;
-//案由
+    //案由
+    @Column(name = "case_reason")
     private String caseReason;
-//时间
-
+    //时间
+    @Column(name = "case_time")
     private Date caseTime;
-//地点
+    //地点
+    @Column(name = "address")
     private String address;
-//审判长
+    //审判长
+    @Column(name = "chief_judge")
     private String chiefJudge;
-//主审法官
+    //主审法官
+    @Column(name = "presiding_judges")
     private String presidingJudges;
-//书记员
+    //书记员
+    @Column(name = "clerk")
     private String clerk;
-//合议庭成员
+    //合议庭成员
+    @Column(name = "collegiate_bench")
     private String collegiateBench;
-//案件信息
+    //案件信息
+    @Column(name = "case_info")
     private String caseInfo;
-//庭审状态
+    //庭审状态
+    @Column(name = "trial_state")
     private int trialState;
-//庭审笔录（文件URL）
+    //庭审笔录（文件URL）
+    @Column(name = "trial_record")
     private String trialRecord;
-//庭审音频（文件URL）
+    //庭审音频（文件URL）
+    @Column(name = "trial_audio")
     private String trialAudio;
-//案件类型
+    //案件类型
+    @Column(name = "case_type")
     private int caseType;
-//备注
+    //备注
+    @Column(name = "message")
     private String message;
 
     public TrialCase() {
     }
 
-    public TrialCase(String trialNo, long templateId, String caseNo, String caseReason,String address, Date caseTime, int trialState) {
+    public TrialCase(String trialNo, long templateId, String caseNo, String caseReason, String address, Date caseTime, int trialState) {
         this.trialNo = trialNo;
         this.templateId = templateId;
         this.caseNo = caseNo;
@@ -139,7 +158,7 @@ public class TrialCase {
     }
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     public Date getCaseTime() {
         return caseTime;
     }
