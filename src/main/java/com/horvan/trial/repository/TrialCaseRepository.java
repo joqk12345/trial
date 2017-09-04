@@ -24,6 +24,20 @@ public interface TrialCaseRepository extends PagingAndSortingRepository<TrialCas
     @Description("根据案号查询")
     List<TrialCase> findByCaseNo(@Param("caseNo") String caseNo);
 
+//    ORDER BY ?#{#pageable}
+//    ORDER BY a.id \n#pageable\n
+//    CONCAT('%',:keyName,'%')  MYSQL 使用sql自带的函数来写sql
+//    查询加入默认值
+    @Query(value = "select * from trial_case t where t.case_no like CONCAT('%',:caseNo,'%') ORDER BY t.case_time DESC \n#pageable\n",
+            countQuery = "select count(*) from trial_case t where t.case_no like CONCAT('%',:caseNo,'%')",
+            nativeQuery = true)
+//    @RestResource(path = "caseNo",exported = true )
+    public Page<TrialCase> find(@Param("caseNo") String caseNo,Pageable pageable);
+
+//    @Query(value = "select t from TrialCase t where t.caseNo=?1")
+//    @RestResource(path = "findCase",exported = true )
+//    public List<TrialCase> findCase(@Param("caseNo") String caseNo);
+
 //    @Query("select u from TrialCase u where u.CaseNo = ?1")
 ////    @RestResource(path = "QueryCaseNo",exported = true )
 //    @Description("根据案号查询查询")
