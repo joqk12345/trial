@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.Description;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.List;
@@ -72,6 +73,10 @@ public interface TrialCaseRepository extends PagingAndSortingRepository<TrialCas
     @Description("根据案件时间进行范围查询,")
     List<TrialCase> findByCaseTimeBetweenOrderByCaseTimeDesc(@Param("startTime") Date startTime, @Param("endTime") Date endTime );
 
+
+    @RestResource(path = "queryByCaseTime",exported = true )
+    @Description("根据案件时间进行范围查询,")
+    Page<TrialCase> queryByCaseTimeBetweenOrderByCaseTimeDesc(@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss") @Param("startTime")  Date startTime,@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss") @Param("endTime") Date endTime, Pageable pageable );
 
     @RestResource(path = "caseNoAndCaseReasonAndTrialStatusIsLikeTrialStatusAndCaseTimeOrderBy" )
     @Description("根据案号,庭审状态和案由进行联合查询查询,案号与案由是模糊查询，庭审状态是精确查询,案件时间范围，结果以案件时间倒序排序")
