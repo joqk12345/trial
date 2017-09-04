@@ -1,26 +1,27 @@
 package com.horvan.trial;
 
-import com.horvan.trial.entity.HotWord;
-import com.horvan.trial.repository.HotWordRepository;
-import org.junit.Assert;
+import com.horvan.trial.entity.RecordTemplate;
+import com.horvan.trial.repository.RecordTemplateRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Date;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class HotWordTest {
+public class RecordTemplateRepositoryTest {
 
     @Autowired
-    private HotWordRepository hotWordRepository;
+    private RecordTemplateRepository recordTemplateRepository;
 
     @Test
-    public void addHotWord() throws  Exception{
+    public void addRecordTemplate() throws  Exception{
 
-        hotWordRepository.save( new HotWord("003","庭审",1,2,"测试专用"));
-        hotWordRepository.save( new HotWord("004","布控",1,2,"测试专用"));
+        recordTemplateRepository.save(new RecordTemplate("001","默认模板",1,new Date(),1,"e://f.txt","测试模板"));
+        recordTemplateRepository.save(new RecordTemplate("002","模板编号",1,new Date(),1,"e://f2.txt","测试模板2"));
 
 
 //        Assert.assertEquals(2,hotWordRepository.count());

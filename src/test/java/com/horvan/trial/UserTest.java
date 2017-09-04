@@ -1,7 +1,9 @@
 package com.horvan.trial;
 
 import com.horvan.trial.entity.HotWord;
+import com.horvan.trial.entity.User;
 import com.horvan.trial.repository.HotWordRepository;
+import com.horvan.trial.repository.UserRepository;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,18 +11,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class HotWordTest {
+public class UserTest {
 
     @Autowired
-    private HotWordRepository hotWordRepository;
+    private UserRepository userRepository;
 
     @Test
-    public void addHotWord() throws  Exception{
+    public void addUser() throws  Exception{
 
-        hotWordRepository.save( new HotWord("003","庭审",1,2,"测试专用"));
-        hotWordRepository.save( new HotWord("004","布控",1,2,"测试专用"));
+
+        userRepository.save(new User("joqk","123456",1));
+        userRepository.save(new User("joqk12345","123456",1));
+
 
 
 //        Assert.assertEquals(2,hotWordRepository.count());
@@ -29,5 +35,11 @@ public class HotWordTest {
 //        hotWordRepository.deleteAll();
     }
 
+    @Test
+    public void SearchByNameAndPassword(){
+       List<User> userList =  userRepository.findByUsernameAndPassword("joqk","123456");
+       Assert.assertEquals(1, userList.size());
+
+    }
 
 }

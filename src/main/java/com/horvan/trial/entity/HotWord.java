@@ -1,24 +1,40 @@
 package com.horvan.trial.entity;
 
 import com.horvan.trial.Constant;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
 @Entity(name = Constant.TABLE_HOTWORD)
 public class HotWord {
+    /**
+     * 指定id为主键，并设置为自增长
+     */
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GenericGenerator(name = "increment", strategy = "increment")
     private long id;
-
+    // 案号
     private String number;
-
+    // 热词名称
     private String name;
-
+    // 类型
     private int type;
-
+//      状态
     private int state;
-
+//备注
     private String message;
+
+    public HotWord() {
+    }
+
+    public HotWord(String number, String name, int type, int state, String message) {
+        this.number = number;
+        this.name = name;
+        this.type = type;
+        this.state = state;
+        this.message = message;
+    }
 
     /**
      * Gets id.  热词id

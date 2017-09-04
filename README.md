@@ -60,6 +60,8 @@
 * 查询问题的校验
     1. 针对js日期控件的显示问题，由于针对表格选择器是使用的通用选择器没有限定范围导致，日期控件本来就是用表格显示的，现在通用表格就改变了他的样式
     2. #tableList table  解决办法，及采用定位好自己的选择的那部分表格使用css样式
+* 日志的添加与使用
+    1.  Note: further occurrences of Parameter errors will be logged at DEBUG level.
   
   
 # spring jpa 
@@ -71,7 +73,8 @@
 # spring data rest 
     1. https://springcloud.cc/spring-data-rest-zhcn.html  （中文版）
     2. https://docs.spring.io/spring-data/rest/docs/current/reference/html/
-    3. https://spring.io/guides/gs/accessing-data-rest/  {用例}
+    3. https://spring.io/guides/gs/accessing-data-rest/  {用例 国外}
+    4. https://github.com/spring-projects/spring-data-book/tree/master/rest  {用例}
     
 # spring API
     1. https://docs.spring.io/spring-data/rest/docs/current/api/org/springframework/data/rest/core/annotation/RestResource.html

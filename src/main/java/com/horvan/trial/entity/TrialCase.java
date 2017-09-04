@@ -62,6 +62,42 @@ public class TrialCase {
         this.trialState = trialState;
     }
 
+    @Transient
+    public String getTrialStateStr() {
+        switch (this.getTrialState()) {
+            case 0:
+                return "开庭";
+            case 1:
+                return "休庭中";
+            case 2:
+                return "闭庭";
+        }
+        return "";
+    }
+
+    @Override
+    public String toString() {
+        return "TrialCase{" +
+                "id=" + id +
+                ", trialNo='" + trialNo + '\'' +
+                ", templateId=" + templateId +
+                ", caseNo='" + caseNo + '\'' +
+                ", caseReason='" + caseReason + '\'' +
+                ", caseTime=" + caseTime +
+                ", address='" + address + '\'' +
+                ", chiefJudge='" + chiefJudge + '\'' +
+                ", presidingJudges='" + presidingJudges + '\'' +
+                ", clerk='" + clerk + '\'' +
+                ", collegiateBench='" + collegiateBench + '\'' +
+                ", caseInfo='" + caseInfo + '\'' +
+                ", trialState=" + trialState +
+                ", trialRecord='" + trialRecord + '\'' +
+                ", trialAudio='" + trialAudio + '\'' +
+                ", caseType=" + caseType +
+                ", message='" + message + '\'' +
+                '}';
+    }
+
     public long getId() {
         return id;
     }
