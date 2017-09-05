@@ -1,0 +1,16 @@
+spring:
+    data:
+        rest:
+            basePath: /api
+            defaultPageSize: 15
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: pofengzhangye
+        url: jdbc:mysql://60.205.112.141:3306/trialdbDemo?characterEncoding=utf8&autoReconnect=true
+        username: root
+    jpa:
+        properties:
+            hibernate:
+                hbm2ddl:
+                    auto: create
+        show-sql: true
