@@ -11,6 +11,7 @@ import org.springframework.data.rest.core.annotation.Description;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
 import java.util.List;
@@ -32,7 +33,7 @@ public interface TrialCaseRepository extends PagingAndSortingRepository<TrialCas
             countQuery = "select count(*) from trial_case t where t.case_no like CONCAT('%',:caseNo,'%')",
             nativeQuery = true)
 //    @RestResource(path = "caseNo",exported = true )
-    public Page<TrialCase> find(@Param("caseNo") String caseNo,Pageable pageable);
+    public Page<TrialCase> find(@Param("caseNo")  @RequestParam(value = "caseNo", defaultValue = "00")  String caseNo, Pageable pageable);
 
 //    @Query(value = "select t from TrialCase t where t.caseNo=?1")
 //    @RestResource(path = "findCase",exported = true )

@@ -77,6 +77,7 @@
     6. http://www.cnblogs.com/chenying99/archive/2013/06/19/3143539.html  { jpa的三种查询方法}
     7. https://docs.spring.io/spring-data/jpa/docs/1.10.11.RELEASE/reference/html/#jpa.named-parameters {jpa 官方文档}
     8. https://stackoverflow.com/questions/38349930/spring-data-and-native-query-with-pagination {原生查询加分页实现}
+    9. http://blog.csdn.net/tomnic_ylwang/article/details/47340799  {spring-data-jpa  @Query 注解中的 like 模糊查询关键字使用}
 # spring data rest 
     1. https://springcloud.cc/spring-data-rest-zhcn.html  （中文版）
     2. https://docs.spring.io/spring-data/rest/docs/current/reference/html/
