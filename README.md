@@ -66,7 +66,8 @@
 * 日志的添加与使用
     1.  Note: further occurrences of Parameter errors will be logged at DEBUG level.
   
-  
+# spring boot
+    1. http://blog.csdn.net/zhoujinyu0713/article/details/46843115 {应用热部署}
 # spring jpa 
     1. https://spring.io/blog/2011/02/10/getting-started-with-spring-data-jpa/
     2. https://yq.aliyun.com/articles/91891  {jpa查询规范案例，阿里云上面的}
