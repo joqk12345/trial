@@ -28,7 +28,7 @@ public class User {
 
     //手机号
     private String mobile;
-
+//   角色
     private int role;
     //所属部门
     private String position;
@@ -40,6 +40,19 @@ public class User {
         this.username = username;
         this.password = password;
         this.role = role;
+    }
+
+    @Transient
+    public String getRoleStr() {
+        switch (this.getRole()) {
+            case 0:
+                return "超级管理员";
+            case 1:
+                return "管理员";
+            case 2:
+                return "普通用户";
+        }
+        return "";
     }
 
     /**
