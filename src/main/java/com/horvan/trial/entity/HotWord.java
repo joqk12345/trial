@@ -22,6 +22,8 @@ public class HotWord {
     private int type;
 //      状态
     private int state;
+//// 使用状态 0为未使用，1 为使用
+//    private  int useState;
 //备注
     private String message;
 
@@ -143,4 +145,10 @@ public class HotWord {
     public void setMessage(String message) {
         this.message = message;
     }
+//    public int getUseState() {
+//        return useState;
+//    }
+//    public void setUseState(int useState) {
+//        this.useState = useState;
+//    }
 }
