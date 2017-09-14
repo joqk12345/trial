@@ -65,7 +65,11 @@
     4. js前端需要控制查询逻辑，而不是把请求参数发到后端处理
 * 日志的添加与使用
     1.  Note: further occurrences of Parameter errors will be logged at DEBUG level.
-  
+
+# tomcat 
+1. http://blog.csdn.net/hongqishi/article/details/7428380 {get查询乱码问题}
+
+
 # spring boot
     1. http://blog.csdn.net/zhoujinyu0713/article/details/46843115 {应用热部署}
 # spring jpa 
@@ -79,6 +83,7 @@
     7. https://docs.spring.io/spring-data/jpa/docs/1.10.11.RELEASE/reference/html/#jpa.named-parameters {jpa 官方文档}
     8. https://stackoverflow.com/questions/38349930/spring-data-and-native-query-with-pagination {原生查询加分页实现}
     9. http://blog.csdn.net/tomnic_ylwang/article/details/47340799  {spring-data-jpa  @Query 注解中的 like 模糊查询关键字使用}
+    10. https://github.com/wenhao/jpa-spec {动态查询规范}
 # spring data rest 
     1. https://springcloud.cc/spring-data-rest-zhcn.html  （中文版）
     2. https://docs.spring.io/spring-data/rest/docs/current/reference/html/
@@ -96,3 +101,7 @@
     3. https://bestiejs.github.io/json3/   json3 的库的使用
 # 前端时间控件-完美兼容IE8
     1. http://www.jq22.com/jquery-info1525   
+    2. http://bbs.blueidea.com/thread-2950899-1-1.html  {js dom对象的解析，通过点击事件来获取当前的元素}
+    
+# spring boot 
+    1. http://blog.csdn.net/javahighness/article/details/52515226 {Spring boot  改为在tomcat外置部署的文档}
