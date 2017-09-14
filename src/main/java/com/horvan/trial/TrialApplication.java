@@ -11,14 +11,6 @@ public class TrialApplication {
 		SpringApplication.run(TrialApplication.class, args);
 	}
 
-//	private CorsConfiguration buildConfig(){
-//
-//		CorsConfiguration corsConfiguration = new  CorsConfiguration();
-//		corsConfiguration.addAllowedOrigin("*");
-//		corsConfiguration.addAllowedHeader("*");
-//		corsConfiguration.addAllowedMethod("*");
-//		return corsConfiguration;
-//	}
 
 
 }
