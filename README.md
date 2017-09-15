@@ -57,6 +57,8 @@
 * js校验
 * js 事件传播机制
     * 通过jquery动态加载html元素的时候也需要动态给其添加样式或者js事件
+* ajax 缓存问题
+    1. http://www.cnblogs.com/Peng2014/p/4684205.html {ajax界面GET请求缓存问题}
 
 * 查询问题的校验
     1. 针对js日期控件的显示问题，由于针对表格选择器是使用的通用选择器没有限定范围导致，日期控件本来就是用表格显示的，现在通用表格就改变了他的样式
@@ -69,9 +71,14 @@
 # tomcat 
 1. http://blog.csdn.net/hongqishi/article/details/7428380 {get查询乱码问题}
 
+# 下载
+1. http://blog.csdn.net/elifefly/article/details/5251934  {解决下载中文乱码问题}
+
 
 # spring boot
     1. http://blog.csdn.net/zhoujinyu0713/article/details/46843115 {应用热部署}
+    2. http://www.cnblogs.com/studyCenter/p/6665171.html    {文件上传} 
+    3. http://blog.csdn.net/linzhiqiang0316/article/details/52639265 {spring-boot 事务}
 # spring jpa 
     1. https://spring.io/blog/2011/02/10/getting-started-with-spring-data-jpa/
     2. https://yq.aliyun.com/articles/91891  {jpa查询规范案例，阿里云上面的}
@@ -102,6 +109,6 @@
 # 前端时间控件-完美兼容IE8
     1. http://www.jq22.com/jquery-info1525   
     2. http://bbs.blueidea.com/thread-2950899-1-1.html  {js dom对象的解析，通过点击事件来获取当前的元素}
-    
+    3. http://www.cnblogs.com/iteakey/p/4094584.html  {input type = file}
 # spring boot 
     1. http://blog.csdn.net/javahighness/article/details/52515226 {Spring boot  改为在tomcat外置部署的文档}
